@@ -1,0 +1,12 @@
+deploy_name: nginx-deployment
+deploy_image: nginx:1.14.2
+deploy_app: nginx
+container_port: 80
+replicas: 1
+claim_name: task-pv-claim
+mount_path: "/usr/share/nginx/html"
+
+pvc_name: task-pv-claim
+access_modes:  ReadWriteOnce
+capacity: 10Gi
+sc_name: standard
